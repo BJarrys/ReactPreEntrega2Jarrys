@@ -1,11 +1,13 @@
 import './ItemListContainer.css';
+import ItemList from '../ItemList/ItemList';
+import { useParams } from 'react-router-dom'
 
 const ItemListContainer = (props) => {
+  const { nombre } = useParams()
   return (
     <section className='ItemListContainer'>
-      <h2>{props.title}</h2>
-    <hr />
       
+    <ItemList />
     </section>
   );
 };
