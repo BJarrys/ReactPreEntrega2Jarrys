@@ -16,6 +16,7 @@ const ItemDetailContainer = () => {
   return (
     
     <div className="product-list-container">
+        { product ? 
 <Card style={{ width: '18rem' }}>
       <Card.Img variant="top" src={product.Colores[0].Imagen} />
       <Card.Body>
@@ -27,7 +28,7 @@ const ItemDetailContainer = () => {
           <strong>Código:</strong> {product.Codigo}
         </Card.Text>
       </Card.Body>
-    </Card>
+    </Card> : <p>Obteniendo producto...</p>}
     </div>
   );
 };

@@ -1,14 +1,17 @@
 import { productosLista } from '../Data/Data.jsx'
 
 function getById(id, array) {
+  var art = {}
   array.forEach(element => {
     element.Articulos.forEach(articulo => {
       if (articulo.Id == id)
       {
-        return articulo
+        console.log(articulo)
+        art = articulo
       }
     })
   });
+  return art
 }
 const getCategoryByNombre = (nombre, array) => array.find((el) => el.Nombre === nombre).Articulos;
 
